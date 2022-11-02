@@ -20,10 +20,10 @@ for line in sys.stdin:
         current_count += count
     else:
         if current_key:
-            print('%s\t%d', current_key, current_count)
+            print(f'{current_key} -> {current_count}')
         current_count = count
         current_key = key
 
 # Outputs the last key if needed!
 if current_key == key:
-    print('%s\t%d', (current_key, current_count))
+    print(f'{current_key} -> {current_count}')

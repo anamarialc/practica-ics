@@ -8,7 +8,7 @@ path = "Ficheros_realizar_Ejr2/BU-www-client-traces/condensed/272/Feb95/"
 
 def main():
     separator = '\t'
-    for filename in os.listdir(path):
+    for filename in sorted(os.listdir(path)):
         documento = filename.split('.')
         usuario = documento[0][3:]  # Sacamos el numero del usuario de cada uno de los ficheros
         with open(os.path.join(path, filename), 'r') as f:
